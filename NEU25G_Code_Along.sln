@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L019_Konstruktor", "L019_Ko
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L020_Properties", "L020_Properties\L020_Properties.csproj", "{7CA68CE1-B306-4B68-A7D0-52631C33C8F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L021_Pass_by_value_vs_Pass_by_reference", "L021_Pass_by_value_vs_Pass_by_reference\L021_Pass_by_value_vs_Pass_by_reference.csproj", "{AE3F77C0-A884-4181-9D78-D73935DD0B0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L022_Struct_Enum", "L022_Struct_Enum\L022_Struct_Enum.csproj", "{7B413725-38B9-45A0-9A5F-21EFED6222F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +133,14 @@ Global
 		{7CA68CE1-B306-4B68-A7D0-52631C33C8F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CA68CE1-B306-4B68-A7D0-52631C33C8F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CA68CE1-B306-4B68-A7D0-52631C33C8F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3F77C0-A884-4181-9D78-D73935DD0B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3F77C0-A884-4181-9D78-D73935DD0B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3F77C0-A884-4181-9D78-D73935DD0B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3F77C0-A884-4181-9D78-D73935DD0B0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B413725-38B9-45A0-9A5F-21EFED6222F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B413725-38B9-45A0-9A5F-21EFED6222F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B413725-38B9-45A0-9A5F-21EFED6222F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B413725-38B9-45A0-9A5F-21EFED6222F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
