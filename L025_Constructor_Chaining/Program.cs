@@ -1,5 +1,5 @@
 ﻿
-var myVehicle = new Vehicle("Toyota", "Yaris", "Yellow" 4,5);
+var myVehicle = new Car("Toyota", "Yaris", "Yellow", 4.5);
 
 //Console.WriteLine($" {myVehicle.Brand}, {myVehicle.Model}, {myVehicle.Color}");
 
