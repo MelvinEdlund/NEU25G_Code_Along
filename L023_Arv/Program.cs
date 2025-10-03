@@ -3,7 +3,6 @@
 // animal.Run();
 
 Console.WriteLine();
-
 var cat = new Cat() { Name = "Pelle" };
 cat.Run();
 cat.Meow();
