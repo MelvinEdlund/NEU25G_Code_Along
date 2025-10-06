@@ -99,6 +99,7 @@ static void MultiTable(int number, Action<int, int> delegateMethod)
     }
 }
 
+
 MultiTable(3, multAndPrint);
 
 Console.WriteLine();
