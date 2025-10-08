@@ -1,5 +1,36 @@
 ﻿
 
+var numbers = new int[] { 4, 6, 97, -15, 13 };
+
+Array.Sort(numbers);
+
+foreach (var number in numbers)
+{
+    Console.WriteLine(number);
+}
+
+Console.WriteLine();
+
+var cats = new Cat[]
+{
+    new Cat("Pelle", 4),
+    new Cat("Måns", 5),
+    new Cat("Bill", 2),
+    new Cat("Bull", 2),
+    new Cat("Maja", 3)
+};
+
+Array.Sort(cats);
+Array.Reverse(cats);
+
+foreach (var cat in cats)
+{
+    Console.WriteLine($"{cat.Name} är {cat.Age} år gammal");
+}
+
+Console.WriteLine();
+
+
 //using (var reader = new StreamReader("myFile.txt"))
 //{
 //    // ...
@@ -12,7 +43,7 @@
 //Console.WriteLine("The end!");
 
 
-var myCat = new Cat("Pelle");
+var myCat = new Cat("Pelle", 5);
 //myCat.Collect();
 
 ICollectable collectable = myCat;
@@ -23,7 +54,7 @@ collectibles.Add(myCat);
 collectibles.Add(new PokemonCard());
 
 var myInventory = new Inventory();
-myInventory.TryCollect(new Cat("Måns"));
+myInventory.TryCollect(new Cat("Måns", 5));
 if (!myInventory.TryCollect(new PokemonCard()))
 {
     Console.WriteLine("Could not collect item");
@@ -65,10 +96,13 @@ class Animal
     }
 }
 
-class Cat : Animal, IDisposable, ICollectable
+class Cat : Animal, IDisposable, ICollectable, IComparable<Cat>
 {
-
-    public Cat(string name) : base(name){ }
+    public int Age { get; set; }
+    public Cat(string name, int age) : base(name)
+    {
+        Age = age;
+    }
 
     public void Collect()
     {
@@ -83,6 +117,12 @@ class Cat : Animal, IDisposable, ICollectable
     public bool IsCollected()
     {
         throw new NotImplementedException();
+    }
+
+    public int CompareTo(Cat? other)
+    {
+        return this.Age.CompareTo(other.Age);
+        //return this.Name.CompareTo(other.Name);
     }
 }
 
