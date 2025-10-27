@@ -15,7 +15,7 @@
             
             <Label
                 x:Name="label"
-               Content="Example label"
+               Content="Todo List"
                 Margin="10 10 0 0"
             />
             
@@ -27,7 +27,7 @@
             />
 
             <TextBox 
-                x:Name="textBox2"
+                x:Name="multilineTextBox"
                 AcceptsReturn="True" 
                 TextWrapping="Wrap"
                 Width="200"
@@ -39,12 +39,71 @@
             />
 
             <Button
-                x:Name="button"
-                Content="Copy text!"
+                x:Name="copyButton"
+                Content="Add text!"
                 Margin="10 10 0 0"
                 Click="button_Click"
                 IsEnabled="True"
             />
+
+            <CheckBox 
+                x:Name="checkBox"
+                Margin="10 10 0 0"
+                Content="Hide Button"
+                IsChecked="False"
+                Click="checkBox_Click"
+            />
+            <Label
+                 Content="Copy mode:"
+                 Margin="10 10 0 0"
+             /> 
+
+            <RadioButton
+                x:Name="radioButtonOverwrite"
+                Content="Overwrite"
+                GroupName="CopyMode"
+                IsChecked="True"
+                Margin="10 10 0 0"
+            />
+            <RadioButton
+                x:Name="radioButtonAppend"
+                Content="Append"
+                GroupName="CopyMode"
+                Margin="10 10 0 0"
+            />
+
+            <Label
+                Content="Is this app awesome?"
+                Margin="10 10 0 0"
+            />
+
+            <RadioButton
+                x:Name="radioButtonYes"
+                Content="Yes"
+                GroupName="YesNo"
+                Margin="10 10 0 0"
+            />
+            <RadioButton
+                x:Name="radioButtonNo"
+                Content="No"
+                GroupName="YesNo"
+                IsChecked="True"
+                Margin="10 10 0 0"
+            />
+
+            <ComboBox
+                x:Name="comboBox"
+                Margin="10 10 0 0"
+                SelectedIndex="1"
+                ToolTip="Select Your language."
+                SelectionChanged="comboBox_SelectionChanged"
+            >
+                <ComboBoxItem>English</ComboBoxItem>
+                <ComboBoxItem>Swedish</ComboBoxItem>
+                <ComboBoxItem>Spanish</ComboBoxItem>
+
+            </ComboBox>
+
         </WrapPanel>
     </Grid>
 </Window>

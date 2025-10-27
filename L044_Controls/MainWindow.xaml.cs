@@ -23,14 +23,32 @@ namespace L044_Controls
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (button is null) return;
-            button.IsEnabled = (textBox.Text.Length > 0);
+            if (copyButton is null) return;
+            copyButton.IsEnabled = (textBox.Text.Length > 0);
             
         }
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            textBox2.Text += textBox.Text +Environment.NewLine;
-            textBox.Text = string.Empty;
+            if (radioButtonAppend.IsChecked == true)
+            {
+                multilineTextBox.Text += Environment.NewLine + textBox.Text;
+            }
+            else
+            {
+                multilineTextBox.Text = Environment.NewLine + textBox.Text;
+
+            }
+            
         }
+        private void checkBox_Click(object sender, RoutedEventArgs e)
+        {
+            copyButton.Visibility = (bool)checkBox.IsChecked ? Visibility.Hidden : Visibility.Visible;
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+                label.Content = ((ComboBoxItem)comboBox.SelectedItem).Content;    
+        }
+    
     }
 }
