@@ -19,20 +19,18 @@ namespace L044_Controls
         public MainWindow()
         {
             InitializeComponent();
-            textBox.Text = "Hello world";
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            if (button is null) return;
+            button.IsEnabled = (textBox.Text.Length > 0);
+            
         }
-
-        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (e.Key == Key.Enter)
-            {
-            label.Content = textBox.Text;
-
-            }
+            textBox2.Text += textBox.Text +Environment.NewLine;
+            textBox.Text = string.Empty;
         }
     }
 }

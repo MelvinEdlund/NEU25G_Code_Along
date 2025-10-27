@@ -23,26 +23,27 @@
                 x:Name="textBox"
                 Text="Melvin"
                 Margin="10 10 0 0"
-                KeyDown="textBox_KeyDown"
+                TextChanged="textBox_TextChanged"
             />
 
             <TextBox 
+                x:Name="textBox2"
                 AcceptsReturn="True" 
-                TextWrapping="NoWrap"
-                Width="100"
+                TextWrapping="Wrap"
+                Width="200"
                 VerticalScrollBarVisibility="Auto"
                 HorizontalScrollBarVisibility="Visible"
                 Margin="10 10 0 0" 
-                Height="100"
-                IsEnabled="False"
+                Height="200"
+                IsEnabled="True"
             />
 
             <Button
                 x:Name="button"
-                Content="Click here!"
+                Content="Copy text!"
                 Margin="10 10 0 0"
-                IsEnabled="False"
-                Visibility="Visible"
+                Click="button_Click"
+                IsEnabled="True"
             />
         </WrapPanel>
     </Grid>
