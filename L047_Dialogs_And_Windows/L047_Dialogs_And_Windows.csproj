@@ -8,8 +8,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\L044_Controls\L044_Controls.csproj" />
-  </ItemGroup>
-
 </Project>
